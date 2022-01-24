@@ -2,16 +2,193 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Austin Clements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- bootstrap -->
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Font Awesome (For Icons) -->
+    <!-- <script -->
+    <!--   src="https://kit.fontawesome.com/d348548e68.js" -->
+    <!--   crossorigin="anonymous" -->
+    <!-- ></script> -->
+
+    <title>Austin Clements</title>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg sticky-top bg-dark navbar-dark py-3 align-items-center"
+    >
+      <div class="container">
+        <a href="#" class="navbar-brand">Austin Clements</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+          aria-controls="navmenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto d-flex align-items-lg-center">
+            <li class="nav-item">
+              <a href="#projects" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="https://github.com/austinclem1"
+                target="_blank"
+                title="GitHub"
+              >
+                <div class="h1 me-2"><i class="bi bi-github"></i></div>
+                <div class="d-lg-none">GitHub</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="https://linkedin.com/in/austinclem1"
+                target="_blank"
+                title="LinkedIn"
+              >
+                <div class="h1 me-2"><i class="bi bi-linkedin"></i></div>
+                <div class="d-lg-none">LinkedIn</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="projects" class="bg-dark text-light p-5 text-center">
+      <div class="container">
+        <h1 class="jumbotron mb-4">Projects</h1>
+
+        <div class="row g-4 text-dark">
+          <div class="col-lg-6 col-xl-4 d-flex align-items-stretch">
+            <div class="card bg-light">
+              <img
+                src="assets/projects/particles.png"
+                class="card-img-top h-50"
+                alt="Colorful particals surrounding spiral"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Particle Sim w/ Rust and Webassembly</h5>
+                <p class="card-text text-start m-3">
+                  An experiment using Webassembly code compiled from
+                  <a href="https://rust-lang.org" target="_blank">Rust</a> to
+                  simulate simple physics on particles which are drawn using the
+                  Canvas API. Inspired by the grat book by Kevin Hoffman:
+                  <a
+                    href="https://pragprog.com/titles/khrust/programming-webassembly-with-rust/"
+                    >Programming Webassembly with Rust</a
+                  >
+                </p>
+              </div>
+              <div class="card-footer">
+                <a
+                  href="https://github.com/austinclem1/rust-wasm-particles"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >View on GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4 d-flex align-items-stretch">
+            <div class="card">
+              <img
+                src="assets/projects/spotify2youtube.jpg"
+                class="card-img-top h-50"
+                alt="Grid of Spotify playlists"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Spotify2YouTube</h5>
+                <p class="card-text text-start m-3">
+                  Site that automates the process of searching for songs and
+                  making a playlist on YouTube based on a Spotify playlist.
+                  Chose this project to expand my knowledge of
+                  <a href="https://reactjs.org/" target="_blank">React</a>
+                </p>
+              </div>
+              <div class="card-footer">
+                <a
+                  href="https://github.com/austinclem1/spotify2youtube"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >View on GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4 d-flex align-items-stretch">
+            <div class="card">
+              <img
+                src="assets/projects/tyrian.png"
+                class="card-img-top h-50"
+                alt="Ships in Tyrian game"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Experiments Optimizing OpenTyrian</h5>
+                <p class="card-text text-start m-3">
+                  Fork of
+                  <a
+                    href="https://github.com/opentyrian/opentyrian"
+                    target="_blank"
+                    >original OpenTyrian project</a
+                  >
+                  with some examples of using vectorized cpu instructions for
+                  faster graphics scaling, as well as some
+                  <a href="https://ziglang.org" target="_blank">Zig</a> and C
+                  code interop and use of the Zig build system.
+                </p>
+              </div>
+              <div class="card-footer">
+                <a
+                  href="https://github.com/austinclem1/opentyrian"
+                  target="_blank"
+                  class="btn btn-primary align-self-end"
+                  >View on GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-me" class="bg-light text-dark p-5">
+      <h1 class="jumbotron">Contact Me</h1>
+      <div class="d-flex align-items-center">
+      <div class="h1 me-2"><i class="bi bi-envelope"></i></div>
+      austinclementsbass@gmail.com
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
